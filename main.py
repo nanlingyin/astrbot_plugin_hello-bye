@@ -95,7 +95,7 @@ class MyPlugin(Star):
         with open(self.json_path, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False)
 
-        yield event.plain_result(f"欢迎图片���设置为：{message}")
+        yield event.plain_result(f"欢迎图片已设置为：{message}")
 
     @filter.command("查看欢迎消息", alias={"查看入群信息", "查看入群提示", "查看欢迎信息"})
     async def get_hello_message(self, event: AstrMessageEvent):
